@@ -1,0 +1,75 @@
+:root {
+  --ink: #172033;
+  --muted: #5f6b7a;
+  --purple: #7259e8;
+  --teal: #10a6a6;
+  --paper: #fbfbff;
+}
+
+.stApp {
+  background:
+    radial-gradient(circle at 85% 0%, rgba(114, 89, 232, 0.10), transparent 28rem),
+    radial-gradient(circle at 5% 18%, rgba(16, 166, 166, 0.08), transparent 24rem),
+    var(--paper);
+}
+
+.block-container {
+  max-width: 1120px;
+  padding-top: 2.2rem;
+  padding-bottom: 4rem;
+}
+
+.hero {
+  padding: 2.2rem 2.4rem;
+  margin-bottom: 1.7rem;
+  border: 1px solid rgba(114, 89, 232, 0.16);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(242,240,255,.92));
+  box-shadow: 0 18px 60px rgba(39, 29, 90, 0.08);
+}
+
+.hero .eyebrow {
+  color: var(--purple);
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  margin-bottom: .55rem;
+}
+
+.hero h1 {
+  color: var(--ink);
+  font-size: clamp(2.1rem, 5vw, 3.45rem);
+  line-height: 1.02;
+  margin: 0;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.08rem;
+  max-width: 690px;
+  margin: .85rem 0 0;
+}
+
+[data-testid="stMetric"] {
+  background: rgba(255, 255, 255, .72);
+  border: 1px solid rgba(23, 32, 51, .08);
+  border-radius: 14px;
+  padding: .75rem 1rem;
+}
+
+[data-testid="stChatMessage"] {
+  border: 1px solid rgba(23, 32, 51, .08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .72);
+}
+
+.stButton > button[kind="primary"],
+.stFormSubmitButton > button[kind="primary"] {
+  background: linear-gradient(100deg, var(--purple), #9279f4);
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  .hero { padding: 1.5rem; border-radius: 18px; }
+  .block-container { padding-top: 1rem; }
+}
